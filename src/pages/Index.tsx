@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from 'react';
+import Navigation from '../components/Navigation';
+import Hero from '../components/Hero';
+import Services from '../components/Services';
+import Footer from '../components/Footer';
+import ParticleBackground from '../components/ParticleBackground';
 
 const Index = () => {
+  useEffect(() => {
+    document.body.style.backgroundColor = '#1A1F2C';
+    return () => {
+      document.body.style.backgroundColor = '';
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gaming-dark text-white">
+      <ParticleBackground />
+      <Navigation />
+      <Hero />
+      <Services />
+      <Footer />
     </div>
   );
 };
