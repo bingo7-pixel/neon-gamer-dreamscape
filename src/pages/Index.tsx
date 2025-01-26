@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Footer from '../components/Footer';
 import ParticleBackground from '../components/ParticleBackground';
+import Blog from '../components/Blog';
+import Contact from '../components/Contact';
 
 const Index = () => {
   useEffect(() => {
@@ -19,6 +21,8 @@ const Index = () => {
       <Navigation />
       <Hero />
       <Services />
+      <Blog />
+      <Contact />
       <Footer />
     </div>
   );
