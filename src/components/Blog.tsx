@@ -4,21 +4,36 @@ import { ArrowRight } from 'lucide-react';
 const blogPosts = [
   {
     title: "The Future of Web Design",
-    excerpt: "Exploring upcoming trends in digital experiences",
+    excerpt: "Exploring upcoming trends in digital experiences and how they're shaping the future of the web",
     date: "2024-03-15",
-    category: "Design"
+    category: "Design",
+    readTime: "5 min read",
+    author: {
+      name: "Alex Chen",
+      avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+    }
   },
   {
     title: "Gaming-Inspired Interfaces",
-    excerpt: "How gaming aesthetics influence modern web design",
+    excerpt: "How gaming aesthetics influence modern web design and user engagement strategies",
     date: "2024-03-10",
-    category: "Gaming"
+    category: "Gaming",
+    readTime: "7 min read",
+    author: {
+      name: "Sarah Johnson",
+      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+    }
   },
   {
     title: "Animation in Web Design",
-    excerpt: "Creating engaging user experiences through motion",
+    excerpt: "Creating engaging user experiences through motion and interactive elements",
     date: "2024-03-05",
-    category: "Animation"
+    category: "Animation",
+    readTime: "4 min read",
+    author: {
+      name: "Mike Zhang",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+    }
   }
 ];
 

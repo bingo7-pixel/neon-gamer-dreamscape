@@ -2,6 +2,27 @@ import { motion } from 'framer-motion';
 import { Mail, MessageSquare, Phone } from 'lucide-react';
 
 const Contact = () => {
+  const contactMethods = [
+    {
+      icon: Mail,
+      title: "Email Us",
+      value: "hello@pixel.design",
+      description: "24/7 support for all inquiries"
+    },
+    {
+      icon: Phone,
+      title: "Call Us",
+      value: "+1 (555) 123-4567",
+      description: "Available Mon-Fri, 9am-6pm EST"
+    },
+    {
+      icon: MessageSquare,
+      title: "Live Chat",
+      value: "Available 24/7",
+      description: "Instant response time"
+    }
+  ];
+
   return (
     <section id="contact" className="py-24 bg-gaming-dark relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -11,7 +32,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Get in Touch</h2>
+          <h2 className="text-5xl font-bold text-white mb-4">Get in Touch</h2>
           <p className="text-white/60">Let's create something amazing together</p>
         </motion.div>
 
@@ -22,33 +43,18 @@ const Contact = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-lg bg-neon-purple/20 flex items-center justify-center">
-                <Mail className="w-6 h-6 text-neon-purple" />
+            {contactMethods.map((method) => (
+              <div key={method.title} className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-lg bg-neon-purple/20 flex items-center justify-center">
+                  <method.icon className="w-6 h-6 text-neon-purple" />
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold">{method.title}</h3>
+                  <p className="text-white/60">{method.value}</p>
+                  <p className="text-white/40">{method.description}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-white font-semibold">Email Us</h3>
-                <p className="text-white/60">hello@pixel.design</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-lg bg-neon-purple/20 flex items-center justify-center">
-                <Phone className="w-6 h-6 text-neon-purple" />
-              </div>
-              <div>
-                <h3 className="text-white font-semibold">Call Us</h3>
-                <p className="text-white/60">+1 (555) 123-4567</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-lg bg-neon-purple/20 flex items-center justify-center">
-                <MessageSquare className="w-6 h-6 text-neon-purple" />
-              </div>
-              <div>
-                <h3 className="text-white font-semibold">Live Chat</h3>
-                <p className="text-white/60">Available 24/7</p>
-              </div>
-            </div>
+            ))}
           </motion.div>
 
           <motion.form

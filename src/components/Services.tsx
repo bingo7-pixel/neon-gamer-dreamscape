@@ -6,21 +6,25 @@ const services = [
     icon: Code,
     title: "Web Development",
     description: "Custom websites built with cutting-edge technology",
+    features: ["React/Next.js", "Three.js Integration", "WebGL Animations"]
   },
   {
     icon: Palette,
     title: "UI/UX Design",
     description: "Intuitive and engaging user experiences",
+    features: ["Cyberpunk Aesthetics", "Motion Design", "Design Systems"]
   },
   {
     icon: Globe,
     title: "Digital Marketing",
     description: "Strategic solutions for online growth",
+    features: ["SEO Optimization", "Social Media", "Content Strategy"]
   },
   {
     icon: Rocket,
     title: "Brand Strategy",
     description: "Comprehensive brand development and positioning",
+    features: ["Brand Identity", "Market Research", "Visual Guidelines"]
   },
 ];
 
